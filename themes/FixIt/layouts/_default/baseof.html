@@ -1,0 +1,87 @@
+{{- partial "init/index.html" . -}}
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ if .IsHome | and (ne .Site.Params.disableThemeInject true) }}
+      <meta name="theme" content='FixIt {{ .Scratch.Get "version" }}'>
+    {{ end }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+    {{- partial "head/meta.html" . -}}
+    {{- partial "head/link.html" . -}}
+    {{- partial "head/seo.html" . -}}
+    {{- partial "head/script.html" . -}}
+    {{- /* TODO preload script https://developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes/rel/preload */ -}}
+    {{- /* TODO add config and page config to config.js (static) */ -}}
+    {{- /* Custom head */ -}}
+    {{- block "custom-head" . }}{{ end -}}
+
+  </head>
+  <body data-header-desktop="{{ .Site.Params.header.desktopMode }}" data-header-mobile="{{ .Site.Params.header.mobileMode }}">
+    <div class="bg-box"></div>
+    <script src="/js/three.min.js"></script>
+    <script src="/js/vanta.birds.min.js"></script>
+    <script src="/js/star.js"></script>
+    <script>
+      function initEffect() {
+        const container = document.querySelector('.bg-box');
+        if (!container) return;
+
+        // 销毁旧实例
+        if (window.vantaInstance) {
+          window.vantaInstance.destroy();
+          window.vantaInstance = null;
+        }
+
+        const theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'dark') {
+          // 初始化粒子系统（自定义逻辑）
+          window.particleInstance = initParticleSystem(container, {
+                starCount: 40000,
+                starSize: 1.5,
+                fogDensity: 0.0002
+              });
+        } else {
+          // ✅ 正确初始化 Vanta（无 new）
+          window.vantaInstance = VANTA.BIRDS({
+            el: ".bg-box",
+            mouseControls: true,
+            touchControls: false,
+            backgroundColor: 0xffffff,
+            color1: 0x8abcd1,
+            color2: 0xf6f7f7,
+            // ...其他参数
+          });
+        }
+      }
+
+      // 监听主题切换 & 初始化
+      const observer = new MutationObserver(initEffect);
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['data-theme']
+      });
+      initEffect(); // 首次加载执行
+</script>
+    {{- /* Body wrapper */ -}}
+    <div class="wrapper" data-page-style="{{ (partial `function/params.html`).pageStyle | default `normal` }}">
+      {{- partial "header.html" . -}}
+      {{- partial "breadcrumb.html" . -}}
+      {{- $toc := .Scratch.Get "toc" -}}
+      <main class="container{{ if (eq $toc.enable true) | and (eq $toc.position `left`) }} container-reverse{{ end }}">
+        {{- block "content" . }}{{ end -}}
+      </main>
+      {{- partialCached "footer.html" . -}}
+    </div>
+
+    {{- /* Theme widgets */ -}}
+    {{- partial "widgets.html" . -}}
+
+    {{- /* Load JavaScript scripts and CSS */ -}}
+    {{- partial "assets.html" . -}}
+  </body>
+</html>

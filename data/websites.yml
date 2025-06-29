@@ -1,0 +1,32 @@
+# 站点信息
+
+- nickname: 中文网字计划
+  avatar: https://chinese-font.netlify.app/favicon.ico
+  url: https://chinese-font.netlify.app/
+  description: |
+    一个开源的中文字体项目
+  category: 设计类
+  category_weight: 2
+
+- nickname: 中国色
+  avatar: https://zhongguose.com/img/favicon.ico
+  url: https://zhongguose.com/
+  description: |
+    中国传统色彩网站
+  category: 设计类
+  category_weight: 2
+
+- nickname: 100fonts
+  avatar: https://www.100font.com/view/img/favicon.ico
+  url: https://100fonts.com/
+  description: |
+    提供免费商用字体
+  category: 设计类
+  category_weight: 2
+
+- nickname: Font Awesome
+  avatar: https://fontawesome.com/favicon.ico
+  url: https://fontawesome.com/icons
+  description: 一个icon开源图标库
+  category: 设计类
+  category_weight: 2

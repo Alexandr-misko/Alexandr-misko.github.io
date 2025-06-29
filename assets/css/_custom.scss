@@ -1,0 +1,133 @@
+// 引入字体 https://chinese-font.netlify.app/zh-cn/cdn/
+@import url('https://chinese-fonts-cdn.deno.dev/packages/lxgwwenkai/dist/LXGWWenKai-Light/result.css');
+@import url('https://chinese-fonts-cdn.deno.dev/packages/hwmct/dist/汇文明朝体/result.css');
+// 自定义字体
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: "LXGW WenKai Light";
+  font-weight: normal;
+  font-size: 1rem;
+}
+.header-title-text {
+  font-family: "Huiwen-mincho";
+  font-weight: normal;
+  font-size: 2.7rem;
+}
+/** 添加网格背景 */
+.single {
+  .single-subtitle {
+    color: #57606a;
+  }
+
+  .content {
+    background-image: linear-gradient(90deg, rgba(60, 10, 30, .04) 3%, transparent 0), linear-gradient(1turn, rgba(60, 10, 30, .04) 3%, transparent 0);
+    background-size: 20px 20px;
+    background-position: center;
+  
+    [data-theme='dark'] & {
+      background-image: linear-gradient(90deg, rgba(195, 245, 215, .04) 3%, transparent 0), linear-gradient(1turn, rgba(195, 245, 215, .04) 3%, transparent 0);
+    }
+  }
+}
+
+.bg-box {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+// .admonition.quote {      
+//   text-align: center;    /* 内容水平居中 */
+//   margin-left: auto;     /* 容器水平居中 */
+//   margin-right: auto;
+//   // max-width: 80%;     /* 限制宽度避免过长 */
+// }
+// .admonition.quote .admonition-title {
+//   text-align: left;      /* 标题文本居中 */
+// }
+
+
+.website {
+  display: flex;
+  align-items: center;
+}
+
+.website-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.website-description {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.website-links {
+  display: flex;
+  flex-wrap: wrap; // 允许换行
+  gap: 20px; // 卡片间距
+  margin-bottom: 30px; // 分类间间距
+}
+
+.website {
+  display: flex;
+  align-items: center;
+  height: 80px;
+  min-height: 80px;
+  width: 250px; // 固定卡片宽度
+  overflow: hidden;
+  flex: 0 0 auto;
+  max-width: none;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.website-avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.website-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // 保持垂直居中
+  height: 100%;
+  margin-left: 12px;
+  overflow: hidden;
+  width: calc(100% - 72px);
+}
+
+.website-nickname {
+  font-weight: bold;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.website-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; // 限制显示1行
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.8em;
+  color: #666;
+  line-height: 1.4;
+  max-height: 3.6em; // 3行高度
+}

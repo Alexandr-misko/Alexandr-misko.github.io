@@ -1,0 +1,3 @@
+[page.library]
+  [page.library.js]
+    flyfish = "/js/flyfish.js"
