@@ -1,7 +1,7 @@
 # website title
 title = "絮泊岛"
 # Hostname (and path) to the root
-baseURL = "https://example.org/"
+baseURL = "https://ihao.fun/"
 # theme list
 theme = ["FixIt"]
 # determines default content language ["en", "zh-cn", "fr", "pl", ...]
@@ -173,12 +173,12 @@ enableEmoji = true
       animate = true
       icon = "fa-solid fa-heartbeat"
       pre = "Running(👉ﾟヮﾟ)👉"
-      value = "2021-12-18T16:15:22+08:00"
+      value = "2025-06-29T21:00:00+08:00"
     [params.footer.order]
       powered = 4
       copyright = 5
-      statistics = 1
-      visitor = 3
+      statistics = 3
+      visitor = 1
       beian = 2
 	  
   [params.recentlyUpdated]
