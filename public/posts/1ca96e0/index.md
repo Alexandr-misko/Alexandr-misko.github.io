@@ -161,5 +161,5 @@ DiskGenius可以管理Windows磁盘分区，这对于安装新系统时非常有
 ---
 
 > 作者: 栖光痕  
-> URL: http://localhost:1313/posts/1ca96e0/  
+> URL: https://ihao.fun/posts/1ca96e0/  
 
