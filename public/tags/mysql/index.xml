@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MySQL - 标签 - 絮泊岛</title>
+    <link>http://localhost:1313/tags/mysql/</link>
+    <description>絮泊岛</description>
+    <generator>Hugo 0.147.7 &amp; FixIt v0.3.20</generator>
+    <language>zh-CN</language>
+    <managingEditor>alexandr_misko@163.com (栖光痕)</managingEditor>
+    <webMaster>alexandr_misko@163.com (栖光痕)</webMaster>
+    <copyright>栖光痕</copyright>
+    <lastBuildDate>Sat, 05 Jul 2025 09:31:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL的安装部署</title>
+      <link>http://localhost:1313/posts/a236d56/</link>
+      <pubDate>Sat, 05 Jul 2025 09:31:00 +0800</pubDate><author>alexandr_misko@163.com (栖光痕)</author>
+      <guid>http://localhost:1313/posts/a236d56/</guid>
+      <category domain="http://localhost:1313/categories/draft/">Draft</category>
+      <description>&lt;div class=&#34;details admonition note open disabled&#34;&gt;&#xA;  &lt;div class=&#34;details-summary admonition-title&#34;&gt;&lt;i class=&#34;icon fa-fw fa-solid fa-pencil-alt&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;内容简介&lt;/div&gt;&#xA;  &lt;div class=&#34;details-content&#34;&gt;&#xA;    &lt;div class=&#34;admonition-content&#34;&gt;&lt;p&gt;记录一次安装 MySQL 8.0 过程&lt;/p&gt;&lt;/div&gt;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&lt;div class=&#34;alert alert-tip&#34;&gt;&lt;p class=&#34;alert-title&#34;&gt;&lt;svg class=&#34;icon&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 16 16&#34; width=&#34;16&#34; height=&#34;16&#34;&gt;&lt;path d=&#34;M8 1.5c-2.363.0-4 1.69-4 3.75.0.984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75.0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.456 8.456.0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863.0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.751.751.0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304.0-2.06-1.637-3.75-4-3.75zM5.75 12h4.5a.75.75.0 010 1.5h-4.5a.75.75.0 010-1.5zM6 15.25a.75.75.0 01.75-.75h2.5a.75.75.0 010 1.5h-2.5A.75.75.0 016 15.25z&#34;/&gt;&lt;/svg&gt;提示&lt;/p&gt;&lt;p&gt;本文使用环境：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;服务器：Kylin Linux Advanced Server V10 (Lance)  SP3-X86&lt;/li&gt;&#xA;&lt;li&gt;MySQL：mysql-8.4.5-linux-glibc2.28-x86_64.tar.xz&lt;/li&gt;&#xA;&lt;/ul&gt;&lt;/div&gt;</description>
+    </item>
+  </channel>
+</rss>
